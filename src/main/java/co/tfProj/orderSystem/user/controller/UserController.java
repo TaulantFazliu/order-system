@@ -28,4 +28,8 @@ public class UserController {
         return this.userService.saveUser(user);
     }
 
+    @DeleteMapping("/{userId}")
+    public void deleteUser(@PathVariable Long userId) {
+        this.userService.deleteUser(userId);
+    }
 }
